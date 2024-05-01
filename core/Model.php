@@ -1,10 +1,10 @@
 <?php
 
- abstract class Model {
+class Model
+{
   protected $db;
-
   private function __construct()
   {
-    $this->db = Database::getInstance()->getConection();
+    return $this->db = Database::getInstance()->getConnection();
   }
- }
+}
