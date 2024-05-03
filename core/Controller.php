@@ -1,12 +1,14 @@
 <?php
 
+ require_once '../models/Usuario.php';
+
 class Controller
 {
 
   public function view($view, $data = [])
   {
     extract($data);
-    $view = "./views/$view.php";
+    $view = "../views/$view.php";
 
     if (file_exists($view)) {
       require $viewFile;
@@ -23,7 +25,7 @@ class Controller
 
   public function getModel($model)
   {
-    $model = "./models/$model.php";
+    $model = "../models/$model.php";
 
     if (file_exists($model)) {
       require_once $model;
