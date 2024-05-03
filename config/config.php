@@ -10,5 +10,6 @@ define('DB_PASS', '');
 //Configuracion URLs
 define('ROOT_URL', 'http://localhost/academia/public');
 
-// Ruta absoluta al directorio raiz 
-// define('APP_ROOT', './views');
+
+
+
