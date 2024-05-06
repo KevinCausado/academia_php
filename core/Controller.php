@@ -1,6 +1,6 @@
 <?php
 
- require_once '../models/Usuario.php';
+// namespace core;
 
 class Controller
 {
