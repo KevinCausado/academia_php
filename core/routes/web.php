@@ -5,9 +5,9 @@ require_once 'routes.php';
 use core\routes\Routes;
 
 
-// Routes::get('/', function () {
-//   echo 'Página principal';
-// });
+Routes::get('/', function () {
+  echo '<br>Página principal';
+});
 
 Routes::get('/usuarios', function () {
   echo '<br>Página de usuarios';
