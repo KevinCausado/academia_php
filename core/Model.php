@@ -1,9 +1,11 @@
 <?php
 
+require_once '../core/Database.php';
+
 abstract class Model
 {
   protected $db;
-  private function __construct()
+  public function __construct()
   {
     return $this->db = Database::getInstance()->getConnection();
   }

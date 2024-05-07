@@ -6,7 +6,7 @@ class Database
 
   private function __construct()
   {
-    $this->conn = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME, DB_USER, DB_PASS);
+    $this->conn = new PDO("mysql:host=localhost;dbname=sistema_productos" ,"root", "");
     $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   }
 
