@@ -1,29 +1,30 @@
 <?php
 
 require_once 'routes.php';
+require_once '../controllers/UsuarioController.php';
 
-use core\routes\Routes;
+$rutas = new Routes();
 
-
-Routes::get('/', function () {
+$rutas::get('/', function () {
   echo '<br>Página principal';
 });
 
-Routes::get('/usuarios', function () {
-  echo '<br>Página de usuarios';
+$rutas::get('/usuarios', function () {
+  $usuarios = new UsuarioController();
+  return $usuarios->index();  
 });
 
-Routes::get('/productos', function () {
+$rutas::get('/productos', function () {
   echo '<br>Página de productos';
 });
 
-Routes::get('/categorias', function () {
+$rutas::get('/categorias', function () {
   echo '<br>Página de categorias';
 });
 
-Routes::get('/pedidos', function () {
+$rutas::get('/pedidos', function () {
   echo '<br>Página de pedidos';
 });
 
 
-Routes::dispatch();
+$rutas::dispatch();

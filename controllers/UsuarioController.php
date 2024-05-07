@@ -1,8 +1,6 @@
 
 <?php
-// namespace controllers;
-// use core\Controller;
-
+require '../core/Controller.php';
 
 class UsuarioController extends Controller
 {
@@ -10,7 +8,7 @@ class UsuarioController extends Controller
   public function index()
   {
     $usuarios = $this->getModel('Usuario')->getAll();
-    return $this->view('usuarios/index', ['usuarios' => $usuarios]);
+    return $this->view('usuarios/index', ['usuarios' => []]);
   }
 
   public function ver($id)

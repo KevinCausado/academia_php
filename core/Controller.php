@@ -8,9 +8,9 @@ class Controller
   public function view($view, $data = [])
   {
     extract($data);
-    $view = "../views/$view.php";
+    $viewFile = "../views/$view.php";
 
-    if (file_exists($view)) {
+    if (file_exists($viewFile)) {
       require $viewFile;
     } else {
       die("La vista $view no existe");
@@ -25,13 +25,13 @@ class Controller
 
   public function getModel($model)
   {
-    $model = "../models/$model.php";
+    $modelFile = "../models/$model.php";
 
-    if (file_exists($model)) {
-      require_once $model;
-      return new $model();
+    if (file_exists($modelFile)) {
+      require_once $modelFile;
+      return new $modelFile();
     } else {
-      die("El model $model no existe");
+      die("El model $modelFile  no existe");
     }
   }
 }
