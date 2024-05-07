@@ -2,6 +2,7 @@
 
 // namespace core;
 
+
 class Controller
 {
 
@@ -25,11 +26,11 @@ class Controller
 
   public function getModel($model)
   {
+
     $modelFile = "../models/$model.php";
 
     if (file_exists($modelFile)) {
       require_once $modelFile;
-      return new $modelFile();
     } else {
       die("El model $modelFile  no existe");
     }
