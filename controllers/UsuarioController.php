@@ -5,11 +5,9 @@ require '../core/Controller.php';
 class UsuarioController extends Controller
 {
 
-  public function index()
+  public static function index()
   {
-    $usuarios = $this->getModel('Usuario')->getAll();    
-    return $this->view('usuarios/index', ['usuarios' => $usuarios]);
+    $usuarios = self::getModel('Usuario')->getAll();
+    return self::view('usuarios/index', ['usuarios' => $usuarios]);
   }
-
-  
 }

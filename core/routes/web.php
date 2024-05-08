@@ -9,10 +9,7 @@ $rutas::get('/', function () {
   echo '<br>Página principal';
 });
 
-$rutas::get('/usuarios', function () {
-  $usuarios = new UsuarioController();
-  return $usuarios->index();  
-});
+$rutas::get('/usuarios', [UsuarioController::class, 'index']);
 
 $rutas::get('/productos', function () {
   echo '<br>Página de productos';

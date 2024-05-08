@@ -1,12 +1,9 @@
 <?php
 
-// namespace core;
-
-
 class Controller
 {
 
-  public function view($view, $data = [])
+  public static function view($view, $data = [])
   {
     extract($data);
     $viewFile = "../views/$view.php";
@@ -24,7 +21,7 @@ class Controller
     exit;
   }
 
-  public function getModel($model)
+  public static function getModel($model)
   {
     $modelFile = "../models/$model.php";
 
